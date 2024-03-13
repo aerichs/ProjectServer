@@ -7,7 +7,7 @@ const s3 = new AWS.S3();
 
 router.get("/", async function (req, res, next) {
   var params = {
-    Bucket: process.env.CYCLIC_BUCKET_NAME,
+    Bucket: cyclic - odd - pear - toad - hose - us - east - 1,
     Delimiter: "/",
     Prefix: "public/",
   };
@@ -17,7 +17,7 @@ router.get("/", async function (req, res, next) {
     keys.map(async (key) => {
       let my_file = await s3
         .getObject({
-          Bucket: process.env.CYCLIC_BUCKET_NAME,
+          Bucket: cyclic - odd - pear - toad - hose - us - east - 1,
           Key: key,
         })
         .promise();
@@ -40,7 +40,7 @@ router.post("/", async function (req, res, next) {
   await s3
     .putObject({
       Body: file.data,
-      Bucket: process.env.CYCLIC_BUCKET_NAME,
+      Bucket: cyclic - odd - pear - toad - hose - us - east - 1,
       Key: "public/" + file.name,
     })
     .promise();
