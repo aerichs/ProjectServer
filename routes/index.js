@@ -28,7 +28,7 @@ router.get("/", async function (req, res, next) {
       };
     })
   );
-  //const pictures = fs.readdirSync(path.join(__dirname, "../pictures/")).slice(0, 3);
+
   res.render("index", { pictures: pictures, title: "Express" });
 });
 
